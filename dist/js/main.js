@@ -1,0 +1,2 @@
+console.log(" \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files."),console.log("test");let menuToggle=document.querySelector(".hamburger");menuToggle.addEventListener("click",e=>{document.body.classList.toggle("nav-active"),console.log("clicked")});
+//# sourceMappingURL=main.js.map
