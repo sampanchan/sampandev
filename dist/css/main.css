@@ -167,6 +167,7 @@ body {
   background-size: 80px;
   background-position: center;
   font-family: all-round-gothic, sans-serif;
+  overflow-x: hidden;
 }
 
 /* 2. Content ================================= */
@@ -176,6 +177,11 @@ body {
   justify-content: space-around;
   background-color: #1a1a1a;
   margin: -1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding: 2rem;
+  }
 }
 .header-container a {
   text-decoration: none;
@@ -228,6 +234,11 @@ body.nav-active .header-container .header-nav {
   z-index: 2;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .header-container .hamburger {
+    display: none;
+  }
+}
 .header-container .hamburger_container {
   display: flex;
   flex-direction: column;
@@ -267,7 +278,7 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
 
 .cherryBlossomTree {
   width: 140%;
-  position: fixed;
+  position: absolute;
   bottom: -50px;
   left: 0;
 }
@@ -278,7 +289,7 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   overflow-x: hidden;
 }
 .main-wrapper_div {
-  background-color: #18191a;
+  background-color: rgba(24, 25, 26, 0.9);
   width: 75vw;
   height: 50vh;
   position: absolute;
@@ -385,6 +396,12 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   flex-direction: column;
   align-content: center;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .work-wrapper {
+    -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+  }
 }
 .work-wrapper .crystal-container {
   position: relative;
@@ -566,6 +583,8 @@ footer {
   background-color: #18191a;
   padding: 2rem;
   margin-top: 4rem;
+  position: relative;
+  z-index: 1;
 }
 footer p {
   color: white;

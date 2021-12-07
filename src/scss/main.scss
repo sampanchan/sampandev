@@ -39,6 +39,7 @@ body {
 	background-size: 80px;
 	background-position: center;
 	font-family: all-round-gothic, sans-serif;
+	overflow-x: hidden;
 
 	// &.nav-active {
 	// 	background: red;
@@ -52,6 +53,9 @@ body {
 	justify-content: space-around;
 	background-color: #1a1a1a;
 	margin: -1rem 0;
+	@include mixins.bp-medium{
+		padding:2rem;
+	}
 	// padding:2rem;
 	a{
 		text-decoration: none;
@@ -109,6 +113,9 @@ body {
 		
 		z-index: 2;
 		cursor: pointer;
+		@include mixins.bp-medium{
+			display: none;
+		}
 		
 			&_container{
 			display: flex;
@@ -154,7 +161,7 @@ body {
 
 .cherryBlossomTree{
 	width: 140%;
-	position: fixed;
+	position: absolute;
 	bottom: -50px;
 	left: 0;
 }
@@ -166,7 +173,7 @@ body {
 	overflow-x: hidden;
 	
 	&_div{
-		background-color: rgb(24, 25, 26);
+		background-color: rgba(24, 25, 26, 0.9);
 		width: 75vw;
 		height: 50vh;
 		position: absolute;
@@ -258,7 +265,12 @@ body {
     align-items: center;
 	// @include mixins.bp-medium{
 	// 	flex-direction: row;
-	// 	// flex-wrap: wrap;
+	// 	justify-content: center;
+	// }
+	// a{
+		@include mixins.bp-medium{
+			transform: rotate(90deg);
+		}
 	// }
 	.crystal-container{
 		position: relative;
@@ -462,6 +474,8 @@ footer{
 	background-color: rgb(24, 25, 26);
 	padding:2rem;
 	margin-top: 4rem;
+	position: relative;
+	z-index: 1;
 	p{
 		color: white;
 		font-size: .8rem;

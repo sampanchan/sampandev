@@ -1,4 +1,4 @@
-
+@use "variables";
 //small devices
 @mixin  bp-small {
     @media screen and (min-width: variables.$breakpoint-phone) {
