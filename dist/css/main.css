@@ -209,6 +209,10 @@ body {
   color: white;
   font-size: 2rem;
 }
+.header-container .header-nav ul li a:hover {
+  color: black;
+  transition: 0.5s ease-in-out;
+}
 body.nav-active .header-container .header-nav {
   display: block;
   position: absolute;
@@ -261,8 +265,17 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
           animation-iteration-count: infinite;
 }
 
+.cherryBlossomTree {
+  width: 140%;
+  position: fixed;
+  bottom: -50px;
+  left: 0;
+}
+
 .main-wrapper {
   position: relative;
+  height: calc(100vh - 100px);
+  overflow-x: hidden;
 }
 .main-wrapper_div {
   background-color: #18191a;
@@ -271,8 +284,8 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, 40%);
-      transform: translate(-50%, 40%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   z-index: 1;
 }
 .main-wrapper_content {
@@ -289,14 +302,19 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   font-family: semplicitapro, sans-serif;
 }
 .main-wrapper_content p {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
-.main-wrapper .cherryBlossomTree {
-  width: 140%;
-  position: absolute;
-  top: 25rem;
-  left: -3rem;
-  overflow-x: hidden;
+.main-wrapper_content p img {
+  width: 40%;
+  margin-top: -4rem;
+}
+.main-wrapper_content p a {
+  text-decoration: none;
+  color: #C9EAF4;
+}
+.main-wrapper_content p a:hover {
+  text-decoration: underline;
+  transition: 0.5s;
 }
 
 .star-container {
@@ -498,6 +516,19 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   font-size: 1.3rem;
 }
 
+.main {
+  background-color: #18191a;
+  margin: 4rem 1rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.main img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .about-wrapper {
   position: relative;
   margin-top: 4rem;
@@ -529,6 +560,33 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
 }
 .about-wrapper_content p {
   margin: 2rem;
+}
+
+footer {
+  background-color: #18191a;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+footer p {
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+footer ul li a {
+  color: white;
+  font-size: 1.3rem;
+}
+footer ul li a:hover {
+  color: #C8B3D7;
+  transition: 0.5s;
 }
 
 @-webkit-keyframes starToggle {

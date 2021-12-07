@@ -1,36 +1,32 @@
+// 0 breakpoints ==================================== 
+// small tablets and large smartphones (landscape view)
+$breakpoint-phone: 576px;
 
-//small devices
-@mixin  bp-small {
-    @media screen and (min-width: variables.$breakpoint-phone) {
-        
-        @content;
-    }
-}
+// small tablets (portrait view)
+$breakpoint-tablet: 768px;
+
+// tablets and small desktops
+$breakpoint-desktop: 992px;
+
+//large tabletss and desktops
+$breakpoint-xl: 1200px;
 
 
-//medium devices
-@mixin bp-medium {
-    @media screen and (min-width: variables.$breakpoint-tablet) {
-        @content;
-    }
-}
+// * 1. Colors =======================================
+$white: #ffffff;
+$black: #1d1c1e;
 
-//Large devices
-@mixin bp-large {
-    @media screen and (min-width: variables.$breakpoint-desktop) {
-        @content;
-    }
-}
 
-//XL devices
-@mixin bp-xl {
-    @media screen and (min-width: variables.$breakpoint-xl) {
-        @content;
-    }
-    
-}
 
-//margin
-@mixin margin {
-    margin-top:3em;
-}
+
+// * 2. Fonts ==========================================
+
+
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+// $main-font: 'Raleway', sans-serif;
+
+
+// * 3. Margin =======================================
+

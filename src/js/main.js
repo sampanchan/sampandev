@@ -10,3 +10,10 @@ menuToggle.addEventListener('click', event =>{
     document.body.classList.toggle('nav-active');
     console.log('clicked');
 } );
+
+var blossomDelay = new TimeLineMax({repeat:-1});
+blossomDelay
+.to('#flower3',1, {delay:2, rotation: 360, transformOrigin: '50% 50%'});
+.to('#flower4',2, {delay:1, rotation: 360, transformOrigin: '50% 50%'});
+.to('#flower2',2, {delay:5, rotation: 360, transformOrigin: '50% 50%'});
+.to('#flower1',3, {delay:5, rotation: 360, transformOrigin: '50% 50%'});
