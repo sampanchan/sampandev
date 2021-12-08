@@ -76,10 +76,19 @@ body {
 	.header-nav{
 		display: none;
 		// margin-top: 3rem;
+		@include mixins.bp-medium{
+			display: block;
+		}
 		ul{
 			display: flex;
 			flex-direction: column;
 			margin-top: 8rem;
+			@include mixins.bp-medium{
+				// display: block;
+				// flex-direction: row;
+				margin-top: 0;
+				flex-direction: row;
+			}
 			
 			li{
 				list-style: none;
@@ -162,14 +171,15 @@ body {
 .cherryBlossomTree{
 	width: 140%;
 	position: absolute;
-	bottom: -50px;
+	bottom: 10px;
 	left: 0;
+	pointer-events: none;
 }
 
 //home page
 .main-wrapper{
 	position: relative;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 155px);
 	overflow-x: hidden;
 	
 	&_div{
@@ -270,6 +280,7 @@ body {
 	// a{
 		@include mixins.bp-medium{
 			transform: rotate(90deg);
+			min-height: calc(100vh - 200px);
 		}
 	// }
 	.crystal-container{
@@ -290,6 +301,9 @@ body {
     		justify-content: space-around;
     		align-items: center;
 			transition: .5s;
+			@include mixins.bp-medium{
+				max-width: 60vh;
+			}
 			
 			&:nth-of-type(2){
 				position: absolute;

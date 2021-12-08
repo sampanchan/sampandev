@@ -200,10 +200,21 @@ body {
 .header-container .header-nav {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .header-container .header-nav {
+    display: block;
+  }
+}
 .header-container .header-nav ul {
   display: flex;
   flex-direction: column;
   margin-top: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .header-container .header-nav ul {
+    margin-top: 0;
+    flex-direction: row;
+  }
 }
 .header-container .header-nav ul li {
   list-style: none;
@@ -279,13 +290,14 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
 .cherryBlossomTree {
   width: 140%;
   position: absolute;
-  bottom: -50px;
+  bottom: 10px;
   left: 0;
+  pointer-events: none;
 }
 
 .main-wrapper {
   position: relative;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 155px);
   overflow-x: hidden;
 }
 .main-wrapper_div {
@@ -401,6 +413,7 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   .work-wrapper {
     -ms-transform: rotate(90deg);
         transform: rotate(90deg);
+    min-height: calc(100vh - 200px);
   }
 }
 .work-wrapper .crystal-container {
@@ -419,6 +432,11 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   justify-content: space-around;
   align-items: center;
   transition: 0.5s;
+}
+@media screen and (min-width: 768px) {
+  .work-wrapper .crystal-container .crystal-div {
+    max-width: 60vh;
+  }
 }
 .work-wrapper .crystal-container .crystal-div:nth-of-type(2) {
   position: absolute;
