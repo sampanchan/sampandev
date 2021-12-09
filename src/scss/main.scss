@@ -420,6 +420,7 @@ body {
 		@include mixins.bp-medium{
 			transform: rotate(90deg);
 			min-height: calc(100vh - 200px);
+			flex-direction: column-reverse;
 		}
 	// }
 	.crystal-container{
@@ -529,18 +530,22 @@ body {
 	animation-iteration-count: infinite;
 	// animation-delay: .2s;
 	margin-top: 3rem;
+	height: calc(100vh - 190px);
 	
 	&_container{
 		@include mixins.bp-medium{
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 	&_link{
 		text-decoration: none;
 		display: flex;
-		}
+		margin: 1rem;
+		
+	}
 	
 	
 	&_background{
@@ -552,15 +557,15 @@ body {
 		height: 60vw;
 		position: relative;
 		@include mixins.bp-medium{
-			width: 55vw;
+			width: 50vw;
 			height: 40vw;
 		}
 		@include mixins.bp-large{
-			width: 45vw;
+			width: 40vw;
 			height: 30vw;
 		}
 		@include mixins.bp-xl{
-			width: 35vw;
+			width: 30vw;
 			height: 20vw;
 		}
 
@@ -588,6 +593,10 @@ body {
 		
 
 }
+//webDev
+.webDev-link{
+	
+}
 // letters = cinema4d
 .main{
 	background-color: rgb(24, 25, 26);
@@ -599,6 +608,18 @@ body {
 	img{
 		width:100%;
 		margin-bottom: 1rem;
+		@include mixins.bp-medium{
+			width: 50%;
+			margin:1.5rem;
+			
+		}
+		@include mixins.bp-large{
+			width:25%;
+		}
+		// @include mixins.bp-xl{
+		// 	width: 30vw;
+		// 	height: 20vw;
+		// }
 
 	}
 }
