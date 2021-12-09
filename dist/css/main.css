@@ -455,6 +455,7 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
 @media screen and (min-width: 768px) {
   .about-wrapper_div {
     flex-direction: row;
+    margin: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -488,6 +489,12 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
 }
 @media screen and (min-width: 768px) {
   .about-wrapper_content {
+    width: 75vw;
+    height: 55vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-wrapper_content {
     width: 50vw;
     height: 55vh;
   }
@@ -501,6 +508,11 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
       transform: translate(-50%, -60%);
   width: 100%;
   padding: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .about-wrapper_content p {
+    line-height: 1.5rem;
+  }
 }
 
 .contact-wrapper {
@@ -669,7 +681,11 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   margin-top: 3rem;
-  height: calc(100vh - 190px);
+}
+@media screen and (min-width: 768px) {
+  .external-links {
+    height: calc(100vh - 190px);
+  }
 }
 @media screen and (min-width: 768px) {
   .external-links_container {
@@ -753,6 +769,10 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   .main img {
     width: 25%;
   }
+}
+
+.ct-link a :nth-last-of-type(3) {
+  margin-bottom: 5rem;
 }
 
 footer {

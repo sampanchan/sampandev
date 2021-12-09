@@ -298,6 +298,7 @@ body {
 	flex-direction: column;
 	@include mixins.bp-medium{
 		height: calc(100vh - 350px);
+		
 	}
 	
 	&_div{
@@ -305,8 +306,10 @@ body {
 		display: flex;
 		flex-direction: column;
     	align-items: center;
+		
 		@include mixins.bp-medium{
 			flex-direction: row;
+			margin: 2rem;
 		}
 		@include mixins.bp-large{
 			justify-content: center;
@@ -339,17 +342,28 @@ body {
 		color: #C9EAF4;
 		font-family: semplicitapro, sans-serif;
 		@include mixins.bp-medium{
+			width: 75vw;
+			height: 55vh;
+			
+		}
+		@include mixins.bp-large{
 			width: 50vw;
 			height: 55vh;
+			
 		}
 		p{
 			margin: 2rem 0rem 0rem 0rem;
 			position: absolute;
-				top:50%;
-				left:50%;
-				transform: translate(-50%, -60%);
-				width: 100%;
-				padding:2rem;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -60%);
+			width: 100%;
+			padding:2rem;
+			;
+			@include mixins.bp-large{
+				line-height: 1.5rem
+			}
+
 			
 		}
 	}
@@ -410,19 +424,13 @@ body {
     flex-direction: column;
     align-content: center;
     align-items: center;
-	// min-width: 100vh;
-	// height: calc(100vh - 190px);
-	// @include mixins.bp-medium{
-	// 	flex-direction: row;
-	// 	justify-content: center;
-	// }
-	// a{
+	
 		@include mixins.bp-medium{
 			transform: rotate(90deg);
 			min-height: calc(100vh - 200px);
 			flex-direction: column-reverse;
 		}
-	// }
+	
 	.crystal-container{
 		position: relative;
 		
@@ -530,7 +538,10 @@ body {
 	animation-iteration-count: infinite;
 	// animation-delay: .2s;
 	margin-top: 3rem;
-	height: calc(100vh - 190px);
+	
+	@include mixins.bp-medium{
+		height: calc(100vh - 190px);
+	}
 	
 	&_container{
 		@include mixins.bp-medium{
@@ -593,11 +604,9 @@ body {
 		
 
 }
-//webDev
-.webDev-link{
-	
-}
-// letters = cinema4d
+//UX
+//Cinema 4d
+	// letters = cinema4d
 .main{
 	background-color: rgb(24, 25, 26);
 	margin: 4rem 1rem;
@@ -623,6 +632,19 @@ body {
 
 	}
 }
+//webDev
+.webDev-link{
+	
+}
+//Creative Tech
+.ct-link{
+	a{
+		:nth-last-of-type(3){
+			margin-bottom: 5rem;
+		}
+	}
+}
+
 
 
 //footer
