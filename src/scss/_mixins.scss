@@ -29,6 +29,12 @@
     }
     
 }
+@mixin bp-2xl {
+    @media screen and (min-width: variables.$breakpoint-xl) {
+        @content;
+    }
+    
+}
 
 //margin
 @mixin margin {

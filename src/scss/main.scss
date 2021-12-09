@@ -102,6 +102,9 @@ body {
 					&:hover{
 						color: black;
 						transition: .5s ease-in-out;
+						@include mixins.bp-medium{
+							color:#C8B3D7;
+						}
 					}
 				}
 			}
@@ -174,12 +177,32 @@ body {
 	bottom: 10px;
 	left: 0;
 	pointer-events: none;
+	@include mixins.bp-medium{
+		width: 100%;
+		bottom: -75px;
+    	left: 7%;
+	}
+	@include mixins.bp-large{
+		width: 85%;
+		bottom: -75px;
+    	left: 15%;
+	}
+	@include mixins.bp-xl{
+		width: 70%;
+		bottom: -75px;
+    	left: 15%;
+	}
+	@include mixins.bp-2xl{
+		width: 65%;
+		bottom: -75px;
+    	left: 15%;
+	}
 }
 
 //home page
 .main-wrapper{
 	position: relative;
-	height: calc(100vh - 155px);
+	height: calc(100vh - 190px);
 	overflow-x: hidden;
 	
 	&_div{
@@ -267,12 +290,128 @@ body {
 	}
 }
 
+//about
+.about-wrapper{
+	// position: relative;
+	margin-top: 4rem;
+	display: flex;
+	flex-direction: column;
+	@include mixins.bp-medium{
+		height: calc(100vh - 350px);
+	}
+	
+	&_div{
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+    	align-items: center;
+		@include mixins.bp-medium{
+			flex-direction: row;
+		}
+		@include mixins.bp-large{
+			justify-content: center;
+		}
+		
+	}
+	&_images{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 2rem;
+		.screen{
+			width:100%;
+		}
+		
+		.sam{
+			margin-top: -17rem;
+			width:75%;
+		}
+	}
+	
+	&_content{
+		background-color: rgb(24, 25, 26);
+		margin-top:1rem ;
+		width: 75vw;
+		height: 65vh;
+		position: relative;
+		text-align: center;
+		font-size: 1.5rem;
+		color: #C9EAF4;
+		font-family: semplicitapro, sans-serif;
+		@include mixins.bp-medium{
+			width: 50vw;
+			height: 55vh;
+		}
+		p{
+			margin: 2rem 0rem 0rem 0rem;
+			position: absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%, -60%);
+				width: 100%;
+				padding:2rem;
+			
+		}
+	}
+}
+//contact
+.contact-wrapper{
+	position: relative;
+	height: calc(100vh - 190px);
+	overflow-x: hidden;
+	
+	&_div{
+		background-color: rgba(24, 25, 26, 0.9);
+		width: 75vw;
+		height: 50vh;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+	&_content{
+		width: 100%;
+		text-align: center;
+		font-size: 1.5rem;
+		padding: .2em;
+		color: #C9EAF4;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: semplicitapro, sans-serif;
+		p{
+			margin-top: 1.5rem;
+			img{
+				width:40%;
+				margin-top: -4rem;
+				@include mixins.bp-large{
+					width:20%;
+					margin-top: -4rem;
+				}
+			}
+			a{
+				text-decoration: none;
+				color: #C9EAF4;
+				&:hover{
+					text-decoration: underline;
+					transition: .5s;
+				}
+			}
+		}
+	}
+	
+	
+}
 // work page
 .work-wrapper{
 	display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
+	// min-width: 100vh;
+	// height: calc(100vh - 190px);
 	// @include mixins.bp-medium{
 	// 	flex-direction: row;
 	// 	justify-content: center;
@@ -391,11 +530,18 @@ body {
 	// animation-delay: .2s;
 	margin-top: 3rem;
 	
-	
+	&_container{
+		@include mixins.bp-medium{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
 	&_link{
 		text-decoration: none;
 		display: flex;
-	}
+		}
+	
 	
 	&_background{
 		background-image: url(/dist/img/screen.png);
@@ -405,6 +551,18 @@ body {
 		width: 75vw;
 		height: 60vw;
 		position: relative;
+		@include mixins.bp-medium{
+			width: 55vw;
+			height: 40vw;
+		}
+		@include mixins.bp-large{
+			width: 45vw;
+			height: 30vw;
+		}
+		@include mixins.bp-xl{
+			width: 35vw;
+			height: 20vw;
+		}
 
 	}
 	&_description{
@@ -444,44 +602,7 @@ body {
 
 	}
 }
-//about
-.about-wrapper{
-	position: relative;
-	margin-top: 4rem;
-	display: flex;
-	flex-direction: column;
-	&_div{
-		text-align: center;
-		&_img{
-			img{
-				width:75%;
-				
-			}
-			
-			
-		}
-		.sam{
-			margin-top: -17rem;
-		}
-	}
-	&_content{
-		background-color: rgb(24, 25, 26);
-		width: 75vw;
-		height: 65vh;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, 40%);
-		
-		text-align: center;
-		font-size: 1.5rem;
-		color: #C9EAF4;
-		font-family: semplicitapro, sans-serif;
-		p{
-			margin: 2rem;
-		}
-	}
-}
+
 
 //footer
 footer{
