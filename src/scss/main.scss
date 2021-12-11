@@ -33,14 +33,16 @@ background: variables.$primary-color;
 	box-sizing: border-box;
 }
 
+html, body {
+	width: 100%;
+}
+
 body {
 	background: rgb(24, 25, 26);
 	background-image: url(/dist/img/bg-tile.png);
 	background-size: 80px;
 	background-position: center;
 	font-family: all-round-gothic, sans-serif;
-	overflow-x: hidden;
-
 	// &.nav-active {
 	// 	background: red;
 	// }
@@ -171,6 +173,19 @@ body {
 	}
 }
 
+.cherry-blossom-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 90vh;
+	overflow: hidden;
+	pointer-events: none;
+	@include mixins.bp-medium{
+		height: 100vh;
+	}
+}
+
 .cherryBlossomTree{
 	width: 140%;
 	position: absolute;
@@ -183,17 +198,17 @@ body {
     	left: 7%;
 	}
 	@include mixins.bp-large{
-		width: 85%;
+		width: 80%;
 		bottom: -75px;
     	left: 15%;
 	}
 	@include mixins.bp-xl{
-		width: 70%;
+		width: 80%;
 		bottom: -75px;
     	left: 15%;
 	}
 	@include mixins.bp-2xl{
-		width: 65%;
+		width: 70%;
 		bottom: -75px;
     	left: 15%;
 	}
@@ -202,8 +217,7 @@ body {
 //home page
 .main-wrapper{
 	position: relative;
-	height: calc(100vh - 190px);
-	overflow-x: hidden;
+	min-height: calc(100vh - 250px);
 	
 	&_div{
 		background-color: rgba(24, 25, 26, 0.9);
@@ -251,12 +265,16 @@ body {
 		position: absolute;
 		&.star-1{
 			top: 7.5rem;
-    		left: 1.4rem;
+			left: 1.4rem;
 			transform: scale(.5);
 			animation-name: starOne;
 			animation-duration: 2s;
 			animation-iteration-count: infinite;
 			animation-delay: .2s;
+			z-index: 1;
+			@include mixins.bp-medium{
+				z-index: 0;
+			}
 		}
 		&.star-2{
 			top: 2.5rem;
@@ -265,19 +283,28 @@ body {
 			animation-duration: 2s;
 			animation-iteration-count: infinite;
 			animation-delay: .4s;
+			z-index: 1;
+			@include mixins.bp-medium{
+				z-index: 0;
+			}
 		}
 		&.star-3{
-			top: 32.5rem;
+			top: 29.5rem;
 			left: 4.4rem;
 			z-index: 1;
 			transform: scale(.8);
 			animation-name: starThree;
 			animation-duration: 2s;
 			animation-iteration-count: infinite;
-			animation-delay: .4s;
+			animation-delay: .5s;
+			
+			@include mixins.bp-medium{
+				top: 32.5rem;
+				left: 4.4rem;
+			}
 		}
 		&.star-4{
-			top: 36.5rem;
+			top: 25.5rem;
 			right: 4.4rem;
 			z-index: 1;
 			transform: scale(.3);
@@ -285,6 +312,10 @@ body {
 			animation-duration: 2s;
 			animation-iteration-count: infinite;
 			animation-delay: .8s;
+			@include mixins.bp-medium{
+				top: 36.5rem;
+				right: 4.4rem;
+			}
 		}
 		
 	}
@@ -297,8 +328,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	@include mixins.bp-medium{
-		height: calc(100vh - 350px);
-		
+		min-height: calc(100vh - 350px);
 	}
 	
 	&_div{
@@ -334,34 +364,40 @@ body {
 	&_content{
 		background-color: rgb(24, 25, 26);
 		margin-top:1rem ;
+		padding: 2rem;
 		width: 75vw;
-		height: 65vh;
+		// height: 65vh;
 		position: relative;
 		text-align: center;
 		font-size: 1.5rem;
 		color: #C9EAF4;
 		font-family: semplicitapro, sans-serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
 		@include mixins.bp-medium{
 			width: 75vw;
-			height: 55vh;
+			// height: 55vh;
 			
 		}
 		@include mixins.bp-large{
 			width: 50vw;
-			height: 55vh;
+			// height: 55vh;
 			
 		}
 		p{
-			margin: 2rem 0rem 0rem 0rem;
-			position: absolute;
-			top:50%;
-			left:50%;
-			transform: translate(-50%, -60%);
+
+			margin: 0.4em 0rem;
+			// position: absolute;
+			// top:50%;
+			// left:50%;
+			// transform: translate(-50%, -60%);
 			width: 100%;
-			padding:2rem;
-			;
+			// padding: 0 2rem;
+			line-height: 1.3em;
 			@include mixins.bp-large{
-				line-height: 1.5rem
+				// line-height: 1.5em;
 			}
 
 			
@@ -371,8 +407,8 @@ body {
 //contact
 .contact-wrapper{
 	position: relative;
-	height: calc(100vh - 190px);
-	overflow-x: hidden;
+	height: calc(100vh - 250px);
+	// overflow-x: hidden;
 	
 	&_div{
 		background-color: rgba(24, 25, 26, 0.9);
@@ -422,13 +458,13 @@ body {
 .work-wrapper{
 	display: flex;
     flex-direction: column;
-    align-content: center;
+    // align-content: center;
     align-items: center;
 	
 		@include mixins.bp-medium{
-			transform: rotate(90deg);
-			min-height: calc(100vh - 200px);
-			flex-direction: column-reverse;
+			// transform: rotate(90deg);
+			// min-height: calc(100vh - 200px);
+			// flex-direction: column-reverse;
 		}
 	
 	.crystal-container{
@@ -450,7 +486,7 @@ body {
     		align-items: center;
 			transition: .5s;
 			@include mixins.bp-medium{
-				max-width: 60vh;
+				// max-width: 60vh;
 			}
 			
 			&:nth-of-type(2){
@@ -529,21 +565,16 @@ body {
 //external-links
 .external-links{
 	text-align: center;
-	// margin: 0 auto;
 	display: flex;
     justify-content: center;
-	animation-name: linkOne;
-	animation-timing-function: ease-in-out;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	// animation-delay: .2s;
 	margin-top: 3rem;
 	
-	@include mixins.bp-medium{
-		height: calc(100vh - 190px);
-	}
+	// @include mixins.bp-medium{
+	// 	height: calc(100vh - 190px);
+	// }
 	
 	&_container{
+		
 		@include mixins.bp-medium{
 			display: flex;
 			flex-direction: row;
@@ -555,7 +586,20 @@ body {
 		text-decoration: none;
 		display: flex;
 		margin: 1rem;
-		
+		animation-name: linkOne;
+		animation-timing-function: ease-in-out;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		// animation-delay: .2s;
+		&:nth-child(2) {
+			animation-delay: 0.1s;
+		}
+		&:nth-child(3) {
+			animation-delay: 0.2s;
+		}
+		&:nth-child(4) {
+			animation-delay: 0.3s;
+		}
 	}
 	
 	
@@ -633,17 +677,15 @@ body {
 	}
 }
 //webDev
-.webDev-link{
-	
-}
+
 //Creative Tech
-.ct-link{
-	a{
-		:nth-last-of-type(3){
-			margin-bottom: 5rem;
-		}
-	}
-}
+// .ct-link{
+// 	a{
+// 		:nth-last-of-type(3){
+// 			margin-bottom: 5rem;
+// 		}
+// 	}
+// }
 
 
 
