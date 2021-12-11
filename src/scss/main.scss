@@ -569,9 +569,9 @@ body {
     justify-content: center;
 	margin-top: 3rem;
 	
-	// @include mixins.bp-medium{
-	// 	height: calc(100vh - 190px);
-	// }
+	@include mixins.bp-medium{
+		height: calc(100vh - 190px);
+	}
 	
 	&_container{
 		

@@ -691,6 +691,11 @@ body.nav-active .header-container .hamburger_container div:nth-child(2) {
   margin-top: 3rem;
 }
 @media screen and (min-width: 768px) {
+  .external-links {
+    height: calc(100vh - 190px);
+  }
+}
+@media screen and (min-width: 768px) {
   .external-links_container {
     display: flex;
     flex-direction: row;
